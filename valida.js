@@ -20,7 +20,6 @@ Se o número digito for maior que 9, consideramos 0.
 //se o tamanho do cpf for diferente de 11 , return false,senao return true
 
 function ReceberCpf(cpfEnviado){
-    this.cpf = cpf;
     Object.defineProperty(this,'cpfLimpo',{
         get:function (){
             return cpfEnviado.replace(/\D+/g,'')
