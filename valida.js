@@ -14,18 +14,20 @@ Se o número digito for maior que 9, consideramos 0.
 11 - (284 % 11) = 2 (Primeiro dígito)
 Se o número digito for maior que 9, consideramos 0.
 */
-//Criar uma funcao construtora que vaireceber o CPF e depois criar com define propety 
+//Criar uma funcao construtora que vaireceber oS CPF e depois criar com define propety 
 //um getter que vai return o cpf somente com os numeros,sem os pontos ou traços
 //depois criar um metodo valida no prototype , se ele for undefined,retorna false
 //se o tamanho do cpf for diferente de 11 , return false,senao return true
 
-function ReceberCpf(cpf){
-    this.cpf =_cpf
-    const cpf = '705.484.450-52'
+function ReceberCpf(cpfEnviado){
+    this.cpf = cpf;
+    Object.defineProperty(ReceberCpf.prototype,'cpfLimpo',{
+        get:function (){
+            return 
+        }
+    })
 }
-Object.defineProperty(ReceberCpf.prototype,'cpf',{
-    get:function (){
-        return this.cpf.prototype.slice(0,-2)
-    }
-})
+ReceberCpf.prototype.valida = function(){
+    if()
+}
 console.log(ReceberCpf)
