@@ -21,13 +21,16 @@ Se o número digito for maior que 9, consideramos 0.
 
 function ReceberCpf(cpfEnviado){
     this.cpf = cpf;
-    Object.defineProperty(ReceberCpf.prototype,'cpfLimpo',{
+    Object.defineProperty(this,'cpfLimpo',{
         get:function (){
-            return 
+            return cpfEnviado.replace(/\D+/g,'')
         }
     })
 }
 ReceberCpf.prototype.valida = function(){
-    if()
+    if(typeof this.cpfLimpo === undefined)return false
+    if(this.cpfLimpo.length !== 11) return false
+    return true
 }
-console.log(ReceberCpf)
+const cpf = new ReceberCpf('705.484.450-52');
+console.log(cpf.valida())
