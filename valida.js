@@ -18,3 +18,12 @@ Se o número digito for maior que 9, consideramos 0.
 //um getter que vai return o cpf somente com os numeros,sem os pontos ou traços
 //depois criar um metodo valida no prototype , se ele for undefined,retorna false
 //se o tamanho do cpf for diferente de 11 , return false,senao return true
+
+function ReceberCpf(cpf){
+    this.cpf =_cpf
+}
+Object.defineProperty(ReceberCpf.prototype,'cpf',{
+    get:function (){
+        return this.cpf.prototype.slice(0,-2)
+    }
+})
