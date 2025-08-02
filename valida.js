@@ -38,7 +38,10 @@ ReceberCpf.prototype.valida = function(){
 
 ReceberCpf.prototype.criaDigito = function (cpfParcial) {
     const  cpfArray = Array.from(cpfParcial);
-    const regressivo = cpfArray;
+    const regressivo = cpfArray.length -1;
+    regressivo --;
+    console(regressivo,this.valida,regressivo * val);
+
 
 }
 const cpf = new ReceberCpf('705.484.450-52');
