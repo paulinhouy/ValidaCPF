@@ -40,7 +40,7 @@ ReceberCpf.prototype.criaDigito = function (cpfParcial) {
     const  cpfArray = Array.from(cpfParcial);
 
     let regressivo = cpfArray.length + 1;
-    const digito  = cpfArray.reduce((ac,val) =>{
+    const total  = cpfArray.reduce((ac,val) =>{
 
         console(regressivo, typeof val,regressivo * val);
         ac += (ac * Number(val))
@@ -48,10 +48,7 @@ ReceberCpf.prototype.criaDigito = function (cpfParcial) {
         return ac;
     },0)
 
-
-
-
-
+    const digito = 11 - (total % 11)
 }
 const cpf = new ReceberCpf('705.484.450-52');
 console.log(cpf.valida())
