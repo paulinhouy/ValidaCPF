@@ -42,8 +42,8 @@ ReceberCpf.prototype.criaDigito = function (cpfParcial) {
     let regressivo = cpfArray.length + 1;
     const digito  = cpfArray.reduce((ac,val) =>{
 
-        console(regressivo,val,regressivo * val);
-        ac += ()
+        console(regressivo, typeof val,regressivo * val);
+        ac += (ac * Number(val))
         regressivo --;
         return ac;
     })
