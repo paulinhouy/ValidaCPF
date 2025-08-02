@@ -29,7 +29,11 @@ function ReceberCpf(cpfEnviado){
 ReceberCpf.prototype.valida = function(){
     if(typeof this.cpfLimpo === undefined)return false
     if(this.cpfLimpo.length !== 11) return false
+    
+    const cpfParcial = this.cpfLimpo.slice(0,-2);
+    const digito1 = this.criaDigito(cpfParcial);
     return true
+
 }
 const cpf = new ReceberCpf('705.484.450-52');
 console.log(cpf.valida())
