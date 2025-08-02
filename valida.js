@@ -46,7 +46,7 @@ ReceberCpf.prototype.criaDigito = function (cpfParcial) {
         ac += (ac * Number(val))
         regressivo --;
         return ac;
-    })
+    },0)
 
 
 
