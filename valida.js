@@ -38,9 +38,18 @@ ReceberCpf.prototype.valida = function(){
 
 ReceberCpf.prototype.criaDigito = function (cpfParcial) {
     const  cpfArray = Array.from(cpfParcial);
-    const regressivo = cpfArray.length -1;
-    regressivo --;
-    console(regressivo,this.valida,regressivo * val);
+
+    let regressivo = cpfArray.length + 1;
+    const digito  = cpfArray.reduce((ac,val) =>{
+
+        console(regressivo,val,regressivo * val);
+        ac += ()
+        regressivo --;
+        return ac;
+    })
+
+
+
 
 
 }
