@@ -32,6 +32,7 @@ ReceberCpf.prototype.valida = function(){
     
     const cpfParcial = this.cpfLimpo.slice(0,-2);
     const digito1 = this.criaDigito(cpfParcial);
+    console.log(digito1)
     return true
 
 }
@@ -47,6 +48,7 @@ ReceberCpf.prototype.criaDigito = function (cpfParcial) {
     },0)
 
     const digito = 11 - (total % 11)
+    return digito > 9 ? 0 : digito
 }
 const cpf = new ReceberCpf('705.484.450-52');
 console.log(cpf.valida())
