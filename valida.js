@@ -35,5 +35,11 @@ ReceberCpf.prototype.valida = function(){
     return true
 
 }
+
+ReceberCpf.prototype.criaDigito = function (cpfParcial) {
+    const  cpfArray = Array.from(cpfParcial);
+    const regressivo = cpfArray;
+
+}
 const cpf = new ReceberCpf('705.484.450-52');
 console.log(cpf.valida())
